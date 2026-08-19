@@ -1,30 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import ContactoCard from "./components/ContactoCard";
 import FormularioContacto from "./components/FormularioContacto";
 
 export default function App() {
-  // Esta es nuestra "base de datos" inicial quemada en el código
-  const [contactos, setContactos] = useState([
-    {
-      id: 1,
-      nombre: "Carolina Pérez",
-      telefono: "300 123 4567",
-      correo: "carolina@sena.edu.co",
-      etiqueta: "Compañera",
+  const contactosGuardados =
+    JSON.parse(localStorage.getItem("contactos")) || [];
 
-    },
-    
-  ]);
+  const [contactos, setContactos] = useState(contactosGuardados);
 
-  //Agregar
+  useEffect(() => {
+    localStorage.setItem("contactos", JSON.stringify(contactos));
+  }, [contactos]);
+
   const agregarContacto = (nuevo) => {
-    setContactos((prev) => [...prev,{id: Date.now(),...nuevo}]);
+    setContactos((prev) => [...prev, nuevo]);
   };
 
-  // Eliminar
-   const eliminarContacto = (id) => {
-     setContactos((prev) => prev.filter((c) => c.id !== id));};
+  const eliminarContacto = (correo) => {
+    setContactos((prev) => prev.filter((c) => c.correo !== correo));
+  };
+
 
 
   return (
@@ -36,8 +32,7 @@ export default function App() {
     <section className="lista-contactos">
       {contactos.map((c) => (
         <ContactoCard
-          key={c.id} // key única para React
-          id={c.id}
+          key={c.correo} // key única para React
           nombre={c.nombre} // prop nombre
           telefono={c.telefono} // prop telefono
           correo={c.correo} // prop correo
