@@ -1,0 +1,14 @@
+// URL base del backend local de Agenda ADSO.
+// Si cambia el puerto o la ruta, solo se modifica aquí.
+export const API_BASE_URL = "http://localhost:3001/contactos";
+
+// Información general de la aplicación que se utilizará en App.jsx
+export const APP_INFO = {
+  
+  ficha: "3412768",
+  
+  titulo: "Agenda ADSO v7",
+  
+  subtitulo:
+    "Gestión de contactos conectada a una API local con JSON Server, con validaciones y mejor experiencia de usuario.",
+};

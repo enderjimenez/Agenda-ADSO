@@ -1,4 +1,12 @@
 {
-  "contactos": [],
+  "contactos": [
+    {
+      "nombre": "Sebastian",
+      "telefono": "3207804739",
+      "correo": "sebas@gmail.com",
+      "etiqueta": "CEO",
+      "id": "uUyrdu-IYbc"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
