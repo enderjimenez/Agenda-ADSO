@@ -1,11 +1,25 @@
 {
   "contactos": [
     {
-      "nombre": "Sebastian",
-      "telefono": "3207804739",
-      "correo": "sebas@gmail.com",
+      "nombre": "Ender ",
+      "telefono": "3126377664",
+      "correo": "enderst2019@gmail.com",
       "etiqueta": "CEO",
-      "id": "uUyrdu-IYbc"
+      "id": "jJ3_pbNncrA"
+    },
+    {
+      "nombre": "Andres",
+      "telefono": "33928833776",
+      "correo": "andres@gmail.com",
+      "etiqueta": "",
+      "id": "KQdLmcHdDqw"
+    },
+    {
+      "nombre": "Sebastian",
+      "telefono": "3207804734",
+      "correo": "sebas@gmail.com",
+      "etiqueta": "trabajor ",
+      "id": "L4QLv2OOX0o"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
