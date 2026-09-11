@@ -7,7 +7,7 @@ export const APP_INFO = {
   
   ficha: "3412768",
   
-  titulo: "Agenda ADSO v7",
+  titulo: "Agenda ADSO v8",
   
   subtitulo:
     "Gestión de contactos conectada a una API local con JSON Server, con validaciones y mejor experiencia de usuario.",
